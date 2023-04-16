@@ -1,3 +1,8 @@
+body,
+html {
+    height: 100%;
+}
+
 .topnav {
     display: flex;
     align-items: left;
@@ -34,13 +39,17 @@
 }
 
 .parallax {
-    min-height: 100px;
-    width: 100%;
+    /* The image used */
+    background-image: url("images/smallerlogo.png");
+
+    /* Full height */
+    height: 100%;
+
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    /* background-size: cover; */
+    background-size: cover;
 }
 
 /* Dropdown Button */
@@ -155,6 +164,7 @@
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+
 }
 
 .slideshow {
@@ -163,13 +173,14 @@
 
 .slideshow img {
     position: absolute;
+    left: 0;
+    right: 0;
     top: 0;
-    left:0;
+    margin: auto;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     width: auto;
-    max-height:500px ;
-    
+    max-height: 500px;
 }
 
 .slideshow img:first-child {
