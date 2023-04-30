@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Eden's Rose</title>
+    <link rel="stylesheet" href="proj.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body style="background-color:rgb(209, 195, 166)">
+    <div class="parallax"></div>
+
+    <div id="topnav" class="topnav">
+        <div class="left">
+            <a href="homePage.html">Home</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="events.html">Events</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Micro Projects
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="AVG.html">Albany Victory Garden</a>
+                    <a href="lamaChopda.html">Lama Chopda</a>
+                    <a href="seva.html">SEVA Chocolate</a>
+                    <a href="wheelsUP.html">WheelsUp</a>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <a href="contact.html">Contact us</href>
+                <a href="loginPage.html">Login</a>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="animate__animated animate__fadeInDown" id="edensRoseBanner">The Eden's Rose Foundation</h1>
+        <!-- <img src="images/painting_beeboxes.jpeg" class="parallax"> -->
+    </div>
+    <content>
+        <div class="content">
+            <div class="slideshow">
+                <img src="images/AVG_sign_planting.jpeg">
+                <img src="images/bike_giveaway.jpeg">
+                <img src="images/community_corner_picup.jpg">
+                <img src="images/dropping_compost_AVG.jpeg">
+                <img src="images/earth_day_bee_painting.jpeg">
+                <img src="images/stacy_raking.jpg">
+                <img src="images/wide_shot_blueberries.jpeg">
+            </div>
+
+            <div class="three-column">
+                <div>Column 1</div>
+                <div class="middle-column">
+                    <p>
+
+                        St. Anne Institute is a private, not for profit, secular residential and community based
+                        preventive
+                        service agency committed to providing the highest level of care and rehabilitation services in
+                        the
+                        briefest time to children and families throughout New York State. We are located on an eight and
+                        one
+                        half-acre campus in the heart of Albany, New York. Each year, thousands of children, young
+                        adults and
+                        families benefit from St. Anne Institute’s programs and services.
+
+                        Admissions
+                        Residential Services St. Anne Institute’s residential program serves young women and their
+                        families from
+                        throughout New York State
+
+                        Community Services Open to both male & female clients and their families (except the Day
+                        Services
+                        Educational Program which is open only to adolescent girls ages 12-21 in the capital region) St.
+                        Anne’s
+                        non-residential programs share the common philosophy that families are the focus of our
+                        interventions.
+                        By emphasizing family strengths and by helping children and their family’s cope with the extreme
+                        stresses they confront, we help families break cycles of abuse and victimization.
+
+                        Some of St. Anne’s Community Services Include:
+
+                        Day Treatment
+                        Sex Abuse Treatment and Prevention
+                        Juvenile Sex Offender</p>
+
+                </div>
+                <div>Column 3</div>
+            </div>
+        </div>
+    </content>
+    <footer>
+        <div id="main-footer" style="margin-bottom: 39px;">
+            <div id="footer-info">
+                <p>The Eden's Rose Foundation is a 501(c) (3) and all donations are tax-deductible. EIN: 14-1340098"</p>
+                <p>We appreciate all your support</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        var images = document.querySelectorAll('.slideshow img');
+        var currentIndex = 0;
+        var intervalTime = 3000; // 2 seconds
+
+        setInterval(function () {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }, intervalTime);
+
+        function fillContent(url, elem) {
+            document.querySelector("#one").className = "notCurrent";//Changes menu all to black
+            document.querySelector("#two").className = "notCurrent";
+            document.querySelector("#three").className = "notCurrent";
+
+            elem.className = "current";//Sets the current page to red highlight
+
+            fetch(url)//fetches html for content for each page
+                .then(function (response) { return response.text(); })
+                .then(function (data) {
+                    document.querySelector('#content').innerHTML = data;
+                });
+            }
+    </script>
+
+</body>
+
+</html>
