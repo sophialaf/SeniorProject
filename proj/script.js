@@ -1,29 +1,3 @@
-// function showPage(page) {
-//     const content = document.getElementById('content');
-//     if (page === 'homePage') {
-//         content.innerHTML = '<h1>Welcome to my website!</h1><p>This is the home page.</p>';
-//     } else if (page === 'aboutUs') {
-//         content.innerHTML = '<h1>About Me</h1><p>I am a web developer.</p>';
-//     } else if (page === 'contact') {
-//         content.innerHTML = '<h1>Contact Me</h1><p>You can reach me at example@example.com.</p>';
-//     } else if (page === 'AVG') {
-//         content.innerHTML = '<h1>Contact Me</h1><p>You can reach me at example@example.com.</p>';
-//     } else if (page === 'events') {
-//         content.innerHTML = '<h1>Contact Me</h1><p>You can reach me at example@example.com.</p>';
-//     } else if (page === 'seva') {
-//         content.innerHTML = '<h1>Contact Me</h1><p>You can reach me at example@example.com.</p>';
-//     } else if (page === 'lamaChopda') {
-//         content.innerHTML = '<h1>Contact Me</h1><p>You can reach me at example@example.com.</p>';
-//     } else if (page === 'contact') {
-//         content.innerHTML = '<h1>Contact Me</h1><p>You can reach me at example@example.com.</p>';
-//     } else if (page === 'contact') {
-//         content.innerHTML = '<h1>Contact Me</h1><p>You can reach me at example@example.com.</p>';
-//     } else if (page === 'contact') {
-//         content.innerHTML = '<h1>Contact Me</h1><p>You can reach me at example@example.com.</p>';
-//     } else if (page === 'contact') {
-//         content.innerHTML = '<h1>Contact Me</h1><p>You can reach me at example@example.com.</p>';
-//     } 
-// }
 
 var images = document.querySelectorAll('.slideshow img');
 var currentIndex = 0;
