@@ -53,16 +53,4 @@ const listItems = document.querySelectorAll("#topnav li");
                     }
                 }
             }
-/*-----------------------
 
-*/
-// script.js
-document.getElementById('getInvolvedBtn').addEventListener('click', function() {
-    document.getElementById('formContainer').style.display = 'block';
-});
-
-document.getElementById('getInvolvedForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    // Handle form submission here
-    // You'll need to send this data to the server (backend) to process and save it to the database.
-});

@@ -257,3 +257,59 @@ About us page
 .project p {
     margin-bottom: 0;
 }
+
+
+/*------------------
+Get involved buttons
+--------------*/
+#getInvolvedForm {
+    display: grid;
+    gap: 10px;
+}
+
+#getInvolvedForm label,
+#getInvolvedForm input,
+#getInvolvedForm select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#getInvolvedForm .name-fields {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+#getInvolvedForm .double-fields {
+    display: flex;
+    gap: 10px;
+}
+
+#getInvolvedForm button {
+    grid-column: span 2; /* Span the button across both columns */
+}
+
+/* Adjustments for smaller input boxes */
+#getInvolvedForm input[type="text"],
+#getInvolvedForm input[type="email"],
+#getInvolvedForm input[type="tel"] {
+    width: calc(50% - 5px);
+}
+
+/* Enable multiple selection for projects */
+#getInvolvedForm select[name="projects"] {
+    height: auto;
+}
+
+/* Arrange projects and age on the same row */
+#getInvolvedForm .projects-and-age {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#getInvolvedForm select[name="age"] {
+    width: calc(50% - 5px);
+}
