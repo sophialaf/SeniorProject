@@ -126,6 +126,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+
         document.getElementById('getInvolvedBtn').addEventListener('click', function(event) {
             event.preventDefault();
     
@@ -144,7 +145,9 @@
             .then(response => response.text())
             .then(data => {
                 console.log(data);
-                // Optionally, display a success message to the user
+                alert('Thank you for your interest!');
+                document.getElementById('formContainer').style.display = 'none';
+                document.getElementById('getInvolvedBtn').style.display = 'block';
             })
             .catch(error => console.error('Error:', error));
         });
@@ -163,16 +166,13 @@
                 showSlide(currentSlide);
             }
     
-            setInterval(nextSlide, 3000); // Change image every 3 seconds
+            setInterval(nextSlide, 3000);
         });
     
         $(document).ready(function () {
-            // Get the offset position of the navbar
             var stickyOffset = $('#topnav').offset().top;
     
-            // Add an event listener for scroll
             $(window).scroll(function () {
-                // Add or remove the 'sticky' class based on scroll position
                 if ($(window).scrollTop() >= stickyOffset) {
                     $('#topnav').addClass('sticky');
                     $('#content').css('margin-top', $('#topnav').height() + 'px');
@@ -184,6 +184,7 @@
         });
     
     </script>
+    
     
 
 </body>
