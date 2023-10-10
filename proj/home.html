@@ -43,81 +43,122 @@
         </div>
     </div>
 
-    <div>
-        <h1 class="animate__animated animate__fadeInDown" id="edensRoseBanner">The Eden's Rose Foundation</h1>
-        <h2 class="centered"> Inciting Change, Inspiring Hope, Empowering sustainability
-        </h2>
-    </div>
-    <div class="top-bottom-split">
-        <div style="height:500px;background-color: rgb(209, 195, 166);">
-            <div class="slideshow" style="margin-top: 0px;">
-                <img src="images/AVG_sign_planting.jpeg">
-                <img src="images/bike_giveaway.jpeg">
-                <img src="images/community_corner_picup.jpg">
-                <img src="images/dropping_compost_AVG.jpeg">
-                <img src="images/earth_day_bee_painting.jpeg">
-                <img src="images/stacy_raking.jpg">
-                <img src="images/wide_shot_blueberries.jpeg">
-            </div>
+    <div class="getinvolved">
+        <button id="getInvolvedBtn">Get Involved</button>
+        <div id="formContainer" style="display: none;">
+            <form id="getInvolvedForm" action="/submitForm" method="post">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="John">
+
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Doe">
+
+                <label for="projects">Projects (Select Multiple)</label>
+                <select id="projects" name="projects" multiple>
+                    <option value="microFarms">Micro Farms</option>
+                    <option value="PPP">Produce Pickup Project</option>
+                    <option value="ufTraining">Urban Farmers Training Program</option>
+                    <option value="frontlines">Frontlines</option>
+                    <option value="homeAgain">Home Again</option>
+                    <option value="avg">Albany Victory Gardens</option>
+                    <option value="apiary">Albany Apiary</option>
+                    <option value="youthOrchard">Youth Blueberry Orchard</option>
+                </select>
+
+                <label for="age">Age</label>
+                <select id="age" name="age">
+                    <option value="under18">Under 18</option>
+                    <option value="18to30">18 to 30</option>
+                    <option value="31to50">31 to 50</option>
+                    <option value="over50">Over 50</option>
+                </select>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="john.doe@example.com">
+
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="555-555-5555">
+
+                <button type="submit">Submit</button>
+            </form>
         </div>
-        <div style="height:500px;">
-            <div class="three-column">
-                <div id="leftcolumn"></div>
-                <div id="middlecolumn">
-                    <h2>Our Mission:</h2>
-                    <p>We want to stop all crime</p>
-                </div>
-                <div id="rightcolumn"></div>
-            </div>
+
+        <div>
+            <h1 class="animate__animated animate__fadeInDown" id="edensRoseBanner">The Eden's Rose Foundation</h1>
+            <h2 class="centered"> Inciting Change, Inspiring Hope, Empowering sustainability
+            </h2>
         </div>
-
-        <footer>
-            <div id="main-footer" style="margin-bottom: 39px;">
-                <div id="footer-info">
-                    <p>The Eden's Rose Foundation is a 501(c) (3) and all donations are tax-deductible. EIN: 26-3807697
-                    </p>
-                    <p>We appreciate all your support</p>
+        <div class="top-bottom-split">
+            <div style="height:500px;background-color: rgb(209, 195, 166);">
+                <div class="slideshow" style="margin-top: 0px;">
+                    <img src="images/AVG_sign_planting.jpeg">
+                    <img src="images/bike_giveaway.jpeg">
+                    <img src="images/community_corner_picup.jpg">
+                    <img src="images/dropping_compost_AVG.jpeg">
+                    <img src="images/earth_day_bee_painting.jpeg">
+                    <img src="images/stacy_raking.jpg">
+                    <img src="images/wide_shot_blueberries.jpeg">
                 </div>
             </div>
-        </footer>
+            <div style="height:500px;">
+                <div class="three-column">
+                    <div id="leftcolumn"></div>
+                    <div id="middlecolumn">
+                        <h2>Our Mission:</h2>
+                        <p>We want to stop all crime</p>
+                    </div>
+                    <div id="rightcolumn"></div>
+                </div>
+            </div>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                var slides = $('.slideshow img');
-                var currentSlide = 0;
+            <footer>
+                <div id="main-footer" style="margin-bottom: 39px;">
+                    <div id="footer-info">
+                        <p>The Eden's Rose Foundation is a 501(c) (3) and all donations are tax-deductible. EIN:
+                            26-3807697
+                        </p>
+                        <p>We appreciate all your support</p>
+                    </div>
+                </div>
+            </footer>
 
-                function showSlide(index) {
-                    slides.removeClass('active');
-                    slides.eq(index).addClass('active');
-                }
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    var slides = $('.slideshow img');
+                    var currentSlide = 0;
 
-                function nextSlide() {
-                    currentSlide = (currentSlide + 1) % slides.length;
-                    showSlide(currentSlide);
-                }
-
-                setInterval(nextSlide, 3000); // Change image every 3 seconds
-            });
-
-            $(document).ready(function () {
-                // Get the offset position of the navbar
-                var stickyOffset = $('#topnav').offset().top;
-
-                // Add an event listener for scroll
-                $(window).scroll(function () {
-                    // Add or remove the 'sticky' class based on scroll position
-                    if ($(window).scrollTop() >= stickyOffset) {
-                        $('#topnav').addClass('sticky');
-                        $('#content').css('margin-top', $('#topnav').height() + 'px');
-                    } else {
-                        $('#topnav').removeClass('sticky');
-                        $('#content').css('margin-top', '0');
+                    function showSlide(index) {
+                        slides.removeClass('active');
+                        slides.eq(index).addClass('active');
                     }
-                });
-            });
 
-        </script>
+                    function nextSlide() {
+                        currentSlide = (currentSlide + 1) % slides.length;
+                        showSlide(currentSlide);
+                    }
+
+                    setInterval(nextSlide, 3000); // Change image every 3 seconds
+                });
+
+                $(document).ready(function () {
+                    // Get the offset position of the navbar
+                    var stickyOffset = $('#topnav').offset().top;
+
+                    // Add an event listener for scroll
+                    $(window).scroll(function () {
+                        // Add or remove the 'sticky' class based on scroll position
+                        if ($(window).scrollTop() >= stickyOffset) {
+                            $('#topnav').addClass('sticky');
+                            $('#content').css('margin-top', $('#topnav').height() + 'px');
+                        } else {
+                            $('#topnav').removeClass('sticky');
+                            $('#content').css('margin-top', '0');
+                        }
+                    });
+                });
+
+            </script>
 
 </body>
 
