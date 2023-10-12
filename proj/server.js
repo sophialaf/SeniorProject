@@ -7,27 +7,32 @@ app.use(express.static(path.join(__dirname, 'proj')));
 
 // Define routes
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'proj/Home.html'));
+    res.sendFile(path.join(__dirname, 'layout.html'));
 });
 
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, 'proj/home.html'));
+});
+
+
 app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname, 'proj/aboutUs.html'));
+    res.sendFile(path.join(__dirname, 'aboutUs.html'));
 });
 
 // Define routes for individual projects
 app.get('/projects/:projectName', (req, res) => {
     const projectName = req.params.projectName;
-    const projectPath = path.join(__dirname, `proj/projects/${projectName}.html`);
+    const projectPath = path.join(__dirname, `projects/${projectName}.html`);
 
     res.sendFile(projectPath);
 });
 
 app.get('/contact', (req, res) => {
-    res.sendFile(path.join(__dirname, 'proj/Contact.html'));
+    res.sendFile(path.join(__dirname, 'contact.html'));
 });
 
 app.get('/events', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Events.html'));
+    res.sendFile(path.join(__dirname, 'events.html'));
 });
 
 // Define routes for shared elements (header, footer, etc.)
