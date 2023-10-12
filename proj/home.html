@@ -9,11 +9,16 @@
 </head>
 
 <body>
+    <!--
+        Scrolling ERF banner. Image and functions in css file
+    -->
     <div class="parallax">
         <div class="centered">
         </div>
     </div>
-
+    <!--
+        Navigation bar
+    -->
     <div id="topnav" class="topnav">
         <div class="left">
             <a href="/">Home</a>
@@ -43,76 +48,83 @@
         </div>
     </div>
 
-    <div>
-        <h1 class="animate__animated animate__fadeInDown" id="edensRoseBanner">The Eden's Rose Foundation</h1>
-        <h2 class="centered"> Inciting Change, Inspiring Hope, Empowering sustainability
-        </h2>
-    </div>
-    <div class="top-bottom-split">
-        <div style="height:500px;background-color: rgb(209, 195, 166);">
-            <div class="slideshow" style="margin-top: 0px;">
-                <img src="images/AVG_sign_planting.jpeg">
-                <img src="images/bike_giveaway.jpeg">
-                <img src="images/community_corner_picup.jpg">
-                <img src="images/dropping_compost_AVG.jpeg">
-                <img src="images/earth_day_bee_painting.jpeg">
-                <img src="images/stacy_raking.jpg">
-                <img src="images/wide_shot_blueberries.jpeg">
-            </div>
+    <!--
+        Begin the content to be switched out with each page 
+    -->
+    <div changeable content>
+        <div>
+            <h1 class="animate__animated animate__fadeInDown" id="edensRoseBanner">The Eden's Rose Foundation</h1>
+            <h2 class="centered"> Inciting Change, Inspiring Hope, Empowering sustainability
+            </h2>
         </div>
-        <div style="height:500px;">
-            <div class="three-column">
-                <div id="leftcolumn"></div>
-                <div id="middlecolumn">
-                    <h2>Our Mission:</h2>
-                    <p>We want to stop all crime</p>
+        <div class="top-bottom-split">
+            <div style="height:500px;">
+                <div class="slideshow" style="margin-top: 0px;">
+                    <img src="images/AVG_sign_planting.jpeg">
+                    <img src="images/bike_giveaway.jpeg">
+                    <img src="images/community_corner_picup.jpg">
+                    <img src="images/dropping_compost_AVG.jpeg">
+                    <img src="images/earth_day_bee_painting.jpeg">
+                    <img src="images/stacy_raking.jpg">
+                    <img src="images/wide_shot_blueberries.jpeg">
                 </div>
-                <div id="rightcolumn"></div>
+            </div>
+            <div style="height:500px;">
+                <div class="three-column">
+                    <div id="leftcolumn"></div>
+                    <div id="middlecolumn">
+                        <h2>Our Mission:</h2>
+                        <p>We want to stop all crime</p>
+                    </div>
+                    <div id="rightcolumn"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+        Get involved form
+        -->
+        <div class="getinvolved">
+            <button id="gib">Get Involved</button>
+            <div id="formContainer" style="display: none;">
+                <form id="getInvolvedForm" action="/submitForm" method="post">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="John">
+
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Doe">
+
+                    <label for="projects">Projects (Select one for now)</label>
+                    <select id="projects" name="projects">
+                        <option value="microFarms">Micro Farms</option>
+                        <option value="PPP">Produce Pickup Project</option>
+                        <option value="ufTraining">Urban Farmers Training Program</option>
+                        <option value="frontlines">Frontlines</option>
+                        <option value="homeAgain">Home Again</option>
+                        <option value="avg">Albany Victory Gardens</option>
+                        <option value="apiary">Albany Apiary</option>
+                        <option value="youthOrchard">Youth Blueberry Orchard</option>
+                    </select>
+
+                    <label for="age">Age</label>
+                    <select id="age" name="age">
+                        <option value="under18">Under 18</option>
+                        <option value="18to30">18 to 30</option>
+                        <option value="31to50">31 to 50</option>
+                        <option value="over50">Over 50</option>
+                    </select>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com">
+
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="555-555-5555">
+
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
     </div>
-
-    <div class="getinvolved">
-        <button id="getInvolvedBtn">Get Involved</button>
-        <div id="formContainer" style="display: none;">
-            <form id="getInvolvedForm" action="/submitForm" method="post">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" placeholder="John">
-
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Doe">
-
-                <label for="projects">Projects (Select one for now)</label>
-                <select id="projects" name="projects" multiple>
-                    <option value="microFarms">Micro Farms</option>
-                    <option value="PPP">Produce Pickup Project</option>
-                    <option value="ufTraining">Urban Farmers Training Program</option>
-                    <option value="frontlines">Frontlines</option>
-                    <option value="homeAgain">Home Again</option>
-                    <option value="avg">Albany Victory Gardens</option>
-                    <option value="apiary">Albany Apiary</option>
-                    <option value="youthOrchard">Youth Blueberry Orchard</option>
-                </select>
-
-                <label for="age">Age</label>
-                <select id="age" name="age">
-                    <option value="under18">Under 18</option>
-                    <option value="18to30">18 to 30</option>
-                    <option value="31to50">31 to 50</option>
-                    <option value="over50">Over 50</option>
-                </select>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="john.doe@example.com">
-
-                <label for="phoneNumber">Phone Number</label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="555-555-5555">
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-
     <footer>
         <div id="main-footer" style="margin-bottom: 39px;">
             <div id="footer-info">
@@ -125,68 +137,7 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-
-        document.getElementById('getInvolvedBtn').addEventListener('click', function(event) {
-            event.preventDefault();
     
-            document.getElementById('formContainer').style.display = 'block';
-        });
-    
-        document.getElementById('getInvolvedForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-    
-            const formData = new FormData(this);
-    
-            fetch('http://localhost:3001/submitForm', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                console.log(data);
-                alert('Thank you for your interest!');
-                document.getElementById('formContainer').style.display = 'none';
-                document.getElementById('getInvolvedBtn').style.display = 'block';
-            })
-            .catch(error => console.error('Error:', error));
-        });
-    
-        $(document).ready(function () {
-            var slides = $('.slideshow img');
-            var currentSlide = 0;
-    
-            function showSlide(index) {
-                slides.removeClass('active');
-                slides.eq(index).addClass('active');
-            }
-    
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % slides.length;
-                showSlide(currentSlide);
-            }
-    
-            setInterval(nextSlide, 3000);
-        });
-    
-        $(document).ready(function () {
-            var stickyOffset = $('#topnav').offset().top;
-    
-            $(window).scroll(function () {
-                if ($(window).scrollTop() >= stickyOffset) {
-                    $('#topnav').addClass('sticky');
-                    $('#content').css('margin-top', $('#topnav').height() + 'px');
-                } else {
-                    $('#topnav').removeClass('sticky');
-                    $('#content').css('margin-top', '0');
-                }
-            });
-        });
-    
-    </script>
-    
-    
-
 </body>
 
 </html>
