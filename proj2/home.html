@@ -68,25 +68,28 @@
 
             <button type="submit">Submit</button>
         </form>
+        <div id="thankYouMessage" style="display: none; text-align: center;">
+            <h2>Thank you for your interest!</h2>
+        </div>
 
         <script>
             function toggleFormVisibility() {
                 var formContainer = document.getElementById("formContainer");
-            
+
                 if (formContainer.style.display === "none") {
                     formContainer.style.display = "block";
                 } else {
                     formContainer.style.display = "none";
                 }
             }
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 var getInvolvedButton = document.getElementById('gib');
-            
-                getInvolvedButton.addEventListener('click', function() {
+
+                getInvolvedButton.addEventListener('click', function () {
                     toggleFormVisibility();
                 });
             });
-                        
+
         </script>
     </div>
 </div>
