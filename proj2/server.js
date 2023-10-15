@@ -43,7 +43,7 @@ app.post('/submitForm', (req, res) => {
                 return console.error(err.message);
             }
             console.log(`Row inserted with ID: ${this.lastID}`);
-            res.send('Form submitted successfully!');
+            // res.send('Form submitted successfully!');
         });
 });
 

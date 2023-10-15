@@ -1,25 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     var getInvolvedButton = document.getElementById('gib');
-
-//     document.getElementById('getInvolvedForm').addEventListener('submit', function (event) {
-//         event.preventDefault();
-
-//         const formData = new FormData(this);
-
-//         fetch('/submitForm', {
-//             method: 'POST',
-//             body: formData
-//         })
-//             .then(response => response.text())
-//             .then(data => {
-//                 console.log(data); // Optional: Log the response from the server
-//             })
-//             .catch(error => {
-//                 console.error('Error:', error);
-//             });
-//     });
-// });
-
 document.addEventListener('DOMContentLoaded', function () {
     var getInvolvedButton = document.getElementById('gib');
     var submitButton = document.getElementById('submitButton');
