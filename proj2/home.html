@@ -4,20 +4,92 @@
     <h1 class="animate__animated animate__fadeInDown" id="edensRoseBanner">The Eden's Rose Foundation</h1>
     <h2 class="centered"> Inciting Change, Inspiring Hope, Empowering sustainability
     </h2>
-</div>
-<div class="top-bottom-split">
-    <div id='content'>
-        <div class="top-bottom-split">
-            <div style="height:500px;">
-                <div class="slideshow" style="margin-top: 0px;">
-                    <img src="images/AVG_sign_planting.jpeg">
-                    <img src="images/bike_giveaway.jpeg">
-                    <img src="images/community_corner_picup.jpg">
-                    <img src="images/dropping_compost_AVG.jpeg">
-                    <img src="images/earth_day_bee_painting.jpeg">
-                    <img src="images/stacy_raking.jpg">
-                    <img src="images/wide_shot_blueberries.jpeg">
+    <div class="container">
+        <content>
+            <div class="top-bottom-split">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 12</div>
+                        <img src="images/AVG_sign_planting.jpeg" style="height:400px">
+                        <div class="text">Summer youth kids planting at AVG</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 12</div>
+                        <img src="images/community_corner_picup.jpg" style="height:400px">
+                        <div class="text">Weeding the Community Corner</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 12</div>
+                        <img src="images/bike_giveaway.jpeg" style="height:400px">
+                        <div class="text">Wheels Up bike giveaway</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 12</div>
+                        <img src="images/dropping_compost_AVG.jpeg" style="height:400px">
+                        <div class="text">Composting the blueberry orchard</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 12</div>
+                        <img src="images/earth_day_bee_painting.jpeg" style="height:400px">
+                        <div class="text">Painting bee hive boxes on Earth Day</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 12</div>
+                        <img src="images/group_bees.jpg" style="height:400px">
+                        <div class="text">Kids' first outing at the Normanskill</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">7 / 12</div>
+                        <img src="images/stacy_raking.jpg" style="height:400px">
+                        <div class="text">Clearing out a lot to plant</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">8 / 12</div>
+                        <img src="images/img12.jpeg" style="height:400px">
+                        <div class="text">Urban Farmer's harvest</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">9 / 12</div>
+                        <img src="images/img3.jpeg" style="height:400px">
+                        <div class="text">Planting native flowers for Frontlines</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">10 / 12</div>
+                        <img src="images/img9.jpeg" style="height:400px">
+                        <div class="text">Produce Pickup Project in action</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">11 / 12</div>
+                        <img src="images/img5.jpeg" style="height:400px">
+                        <div class="text">Chocolate formulation</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">12 / 12</div>
+                        <img src="images/niema.jpg" style="height:400px">
+                        <div class="text">Albany youth holding a frame of bees</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
                 </div>
+
+                <a class="prev" onclick="changeSlide(-1)">❮</a>
+                <a class="next" onclick="changeSlide(1)">❯</a>
+
+            </div>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+                <span class="dot" onclick="currentSlide(10)"></span>
+                <span class="dot" onclick="currentSlide(11)"></span>
+                <span class="dot" onclick="currentSlide(12)"></span>
             </div>
             <div style="margin: 0 auto; max-width: 800px; text-align: left;">
                 <h2>Our Mission:</h2>
@@ -36,66 +108,5 @@
                     <br>and environmental, economic, and cultural sustainability.
                 </p>
             </div>
-        </div>
-
-        <!-------------------------------------------------------------------------------------------------
-            Get involved form
-        ---------------------------------------------------------------------------------------------------->
-        <div class="getinvolved">
-            <button id="gib" class="button-56">Get Involved</button>
-            <div id="formContainer" style="display: none;">
-                <form id="getInvolvedForm" action="/submitForm" method="post">
-                    <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName" placeholder="John">
-
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName" placeholder="Doe">
-
-                    <label for="projects">Projects (Select one for now)</label>
-                    <select id="projects" name="projects">
-                        <option value="microFarms">Micro Farms</option>
-                        <option value="PPP">Produce Pickup Project</option>
-                        <option value="ufTraining">Urban Farmers Training Program</option>
-                        <option value="frontlines">Frontlines</option>
-                        <option value="homeAgain">Home Again</option>
-                        <option value="avg">Albany Victory Gardens</option>
-                        <option value="apiary">Albany Apiary</option>
-                        <option value="youthOrchard">Youth Blueberry Orchard</option>
-                    </select>
-
-                    <label for="age">Age</label>
-                    <select id="age" name="age">
-                        <option value="under18">Under 18</option>
-                        <option value="18to30">18 to 30</option>
-                        <option value="31to50">31 to 50</option>
-                        <option value="over50">Over 50</option>
-                    </select>
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="john.doe@example.com">
-
-                    <label for="phoneNumber">Phone Number</label>
-                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="555-555-5555">
-
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </div>
     </div>
-</div>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var getInvolvedButton = document.getElementById('gib');
-        var submitButton = document.getElementById('submitButton');
-        var formContainer = document.getElementById('formContainer');
-    
-        getInvolvedButton.addEventListener('click', function () {
-            formContainer.style.display = 'block';
-        });
-    
-        submitButton.addEventListener('click', function () {
-            formContainer.style.display = 'none';
-        });
-    });
-    
-</script>
+    </content>
