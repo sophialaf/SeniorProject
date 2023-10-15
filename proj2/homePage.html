@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Eden's Rose Foundation</title>
-    <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="css.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -66,7 +65,37 @@
                     </h2>
                 </div>
                 <div class="top-bottom-split">
-                    <div style="height:500px;">
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="images/AVG_sign_planting.jpeg" style="height:400px">
+                            <div class="text">Caption Text</div>
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="images/community_corner_picup.jpg" style="height:400px">
+                            <div class="text">Caption Two</div>
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="images/bike_giveaway.jpeg" style="height:400px">
+                            <div class="text">Caption Three</div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                    </div>
+
+                        <a class="prev" onclick="changeSlide(-1)">❮</a>
+                        <a class="next" onclick="changeSlide(1)">❯</a>
+
+                    </div>
+
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                    <!-- <div style="height:500px;">
                         <div class="slideshow" style="margin-top: 0px;">
                             <img src="images/AVG_sign_planting.jpeg">
                             <img src="images/bike_giveaway.jpeg">
@@ -76,7 +105,7 @@
                             <img src="images/stacy_raking.jpg">
                             <img src="images/wide_shot_blueberries.jpeg">
                         </div>
-                    </div>
+                    </div> -->
                     <div style="margin: 0 auto; max-width: 800px; text-align: left;">
                         <h2>Our Mission:</h2>
                         <p>The Eden's Rose Foundation is an international 501c3 non-profit
@@ -175,6 +204,10 @@
     </footer>
     </div>
 
+</body>
+
+</html>
+</script>
 </body>
 
 
