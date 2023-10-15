@@ -9,321 +9,338 @@
     <script src="script.js"></script>
     <style>
         body,
-html {
-    height: 100%;
-}
-body {
-    background-color: rgb(255, 255, 255);
-    /* padding-bottom: 100px; */
-    font-family: optima, sans-serif;
-}
-.topnav {
-    display: flex;
-    background-color: rgb(0, 75, 19);
-    width: 100%;
-    position: 80px;
-}
+        html {
+            height: 100%;
+        }
 
-.topnav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
+        body {
+            background-color: rgb(255, 255, 255);
+            /* padding-bottom: 100px; */
+            font-family: optima, sans-serif;
+        }
 
-.topnav li {
-    float: left;
-}
+        .topnav {
+            display: flex;
+            background-color: rgb(0, 75, 19);
+            width: 100%;
+            position: 80px;
+        }
 
-.topnav a {
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
+        .topnav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
-.topnav a:hover {
-    background-color: rgb(199, 236, 199);
-    color: black;
-}
+        .topnav li {
+            float: left;
+        }
 
-.topnav a.active {
-    background-color: #88b279;
-    color: rgb(0, 0, 0);
-}
+        .topnav a {
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
+        .topnav a:hover {
+            background-color: rgb(199, 236, 199);
+            color: black;
+        }
 
+        .topnav a.active {
+            background-color: #88b279;
+            color: rgb(0, 0, 0);
+        }
 
-/*------------------------------------------------------------------------------------------------------ */
-
-/* #logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-} */
-.parallax {
-    background-image: url("images/edensRoseLogo.jpg");
-    height: 180px; /* Adjusted to 60px as per your description */
-    width: 100%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    background-color: #f5a8b3;
-}
-
-.centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.centered img {
-    width: 20px;
-    height: 20px; /* Adjusted to 20px as per your description */
-}
-/*------------------------------------------------------------------------------------------------------ */
-/* Dropdown Button */
-.dropbtn {
-    background-color: rgb(0, 75, 19);
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    font-family: optima, sans-serif;
-}
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
-/*------------------------------------------------------------------------------------------------------ */
-.content-section {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ccc;
-    padding: 20px;
-}
-.content-title {
-    margin-bottom: 20px;
-}
-.content-title h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-}
-.content-body {
-    display: flex;
-    flex-direction: row;
-}
-.content-image {
-    flex: 1;
-    margin-right: 20px;
-}
-.content-image img {
-    max-width: 100%;
-    height: auto;
-}
-.content-text {
-    flex: 2;
-}
-.content-text p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0;
-}
-.containerImgs {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-.imagez {
-    flex-basis: 40%;
-    margin: 10px;
-
-}
-.imagez img {
-    max-width: 500px;
-    height: auto;
-}
-/*------------------------------------------------------------------------------------------------------ */
-#edensRoseBanner {
-    font-size: 40px;
-    text-align: center;
-
-}
-/*------------------------------------------------------------------------------------------------------ */
-.slideshow {
-    position: relative;
-    margin-top: 0px;
-    height: 100%;
-}
-.slideshow img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: auto;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    width: 750px;
-    max-height: 500px;
-}
-.slideshow img:first-child {
-    opacity: 1;
-}
-.slideshow img.active {
-    opacity: 1;
-}
-/*------------------------------------------------------------------------------------------------------ */
-/* Div layouting */
-/*------------------------------------------------------------------------------------------------------ */
-.right {
-    display: flex;
-    align-items: right;
-    margin-left: auto;
-}
-.left {
-    display: flex;
-    align-items: left;
-}
-.top-bottom-split {
-    display: flex;
-    flex-direction: column;
-}
-.three-column {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    height: 100%;
-}
-.three-column div:nth-child(2) {
-    font-size: large;
-}
-/*------------------------------------------------------------------------------------------------------ */
-footer {
-    bottom: 0;
-    text-align: center;
-    padding: 2px;
-    background-color: rgb(184, 145, 118);
-    color: white;
-    display: block;
-    margin-top: 10px;
-    /* position: fixed; */
-}
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
 
 
-/*-------------------
+        /*------------------------------------------------------------------------------------------------------ */
+        .parallax {
+            background-image: url("images/edensRoseLogo.jpg");
+            height: 180px;
+            /* Adjusted to 60px as per your description */
+            width: 100%;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            background-color: #f5a8b3;
+        }
+
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .centered img {
+            width: 20px;
+            height: 20px;
+            /* Adjusted to 20px as per your description */
+        }
+
+        /*------------------------------------------------------------------------------------------------------ */
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: rgb(0, 75, 19);
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            font-family: optima, sans-serif;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        /*------------------------------------------------------------------------------------------------------ */
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .content-title {
+            margin-bottom: 20px;
+        }
+
+        .content-title h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .content-body {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .content-image {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .content-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .content-text {
+            flex: 2;
+        }
+
+        .content-text p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .containerImgs {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .imagez {
+            flex-basis: 40%;
+            margin: 10px;
+
+        }
+
+        .imagez img {
+            max-width: 500px;
+            height: auto;
+        }
+
+        /*------------------------------------------------------------------------------------------------------ */
+        #edensRoseBanner {
+            font-size: 40px;
+            text-align: center;
+
+        }
+
+        /*------------------------------------------------------------------------------------------------------ */
+        .slideshow {
+            position: relative;
+            margin-top: 0px;
+            height: 100%;
+        }
+
+        .slideshow img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            width: 750px;
+            max-height: 500px;
+        }
+
+        .slideshow img:first-child {
+            opacity: 1;
+        }
+
+        .slideshow img.active {
+            opacity: 1;
+        }
+
+        /*------------------------------------------------------------------------------------------------------ */
+        /* Div layouting */
+        /*------------------------------------------------------------------------------------------------------ */
+        .right {
+            display: flex;
+            align-items: right;
+            margin-left: auto;
+        }
+
+        .left {
+            display: flex;
+            align-items: left;
+        }
+
+        .top-bottom-split {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /*------------------------------------------------------------------------------------------------------ */
+        footer {
+            bottom: 0;
+            text-align: center;
+            padding: 2px;
+            background-color: rgb(184, 145, 118);
+            color: white;
+            display: block;
+            margin-top: 10px;
+            /* position: fixed; */
+        }
+
+
+        /*-------------------
 About us page
 --------------------*/
-.project {
-    border: 1px solid rgb(0, 57, 6);
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #ffddbc;
-}
+        .project {
+            border: 1px solid rgb(0, 57, 6);
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #ffddbc;
+        }
 
-.project h3 {
-    margin-top: 0;
-}
+        .project h3 {
+            margin-top: 0;
+        }
 
-.project p {
-    margin-bottom: 0;
-}
+        .project p {
+            margin-bottom: 0;
+        }
 
 
-/*------------------
+        /*------------------
 Get involved buttons
 --------------*/
-#getInvolvedForm {
-    display: grid;
-    gap: 10px;
-}
+        #getInvolvedForm {
+            display: grid;
+            gap: 10px;
+        }
 
-#getInvolvedForm label,
-#getInvolvedForm input,
-#getInvolvedForm select {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-}
+        #getInvolvedForm label,
+        #getInvolvedForm input,
+        #getInvolvedForm select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
 
-#getInvolvedForm .name-fields {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr 1fr;
-}
+        #getInvolvedForm .name-fields {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 1fr;
+        }
 
-#getInvolvedForm .double-fields {
-    display: flex;
-    gap: 10px;
-}
+        #getInvolvedForm .double-fields {
+            display: flex;
+            gap: 10px;
+        }
 
-#getInvolvedForm button {
-    grid-column: span 2; /* Span the button across both columns */
-}
+        #getInvolvedForm button {
+            grid-column: span 2;
+            /* Span the button across both columns */
+        }
 
-/* Adjustments for smaller input boxes */
-#getInvolvedForm input[type="text"],
-#getInvolvedForm input[type="email"],
-#getInvolvedForm input[type="tel"] {
-    width: calc(50% - 5px);
-}
+        /* Adjustments for smaller input boxes */
+        #getInvolvedForm input[type="text"],
+        #getInvolvedForm input[type="email"],
+        #getInvolvedForm input[type="tel"] {
+            width: calc(50% - 5px);
+        }
 
-/* Enable multiple selection for projects */
-#getInvolvedForm select[name="projects"] {
-    height: auto;
-}
+        /* Enable multiple selection for projects */
+        #getInvolvedForm select[name="projects"] {
+            height: auto;
+        }
 
-/* Arrange projects and age on the same row */
-#getInvolvedForm .projects-and-age {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 10px;
-}
+        /* Arrange projects and age on the same row */
+        #getInvolvedForm .projects-and-age {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
 
-#getInvolvedForm select[name="age"] {
-    width: calc(50% - 5px);
-}
-
+        #getInvolvedForm select[name="age"] {
+            width: calc(50% - 5px);
+        }
     </style>
 
 
@@ -334,34 +351,44 @@ Get involved buttons
         <div class="centered">
         </div>
     </div>
-        <div id="topnav" class="topnav">
-            <div class="left">
-                <a href="#" id="one" class="current" onclick="fillContent('home.html', this)">Home</a>
-                <a href="#" id="two" class="notCurrent" onclick="fillContent('aboutUs.html', this)">About Us</a>
-                <a href="#" id="three" class="notCurrent" onclick="fillContent('events.html', this)">Upcoming Events</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Micro Projects
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#" id="four" class="notCurrent" onclick="fillContent('projects/AVG.html', this)">Albany Victory Garden</a>
-                        <a href="#" id="five" class="notCurrent" onclick="fillContent('projects/lamaChopda.html', this)">Lama Chopda</a>
-                        <a href="#" id="six" class="notCurrent" onclick="fillContent('projects/seva.html', this)">SEVA Chocolate</a>
-                        <a href="#" id="seven" class="notCurrent" onclick="fillContent('projects/wheelsUP.html', this)">WheelsUp</a>
-                        <a href="#" id="eight" class="notCurrent" onclick="fillContent('projects/ppp.html', this)">Produce Pickup Project</a>
-                        <a href="#" id="nine" class="notCurrent" onclick="fillContent('projects/blueb.html', this)">Youth Blueberry Orchard</a>
-                        <a href="#" id="ten" class="notCurrent" onclick="fillContent('projects/frontlines.html', this)">Frontlines</a>
-                        <a href="#" id="eleven" class="notCurrent" onclick="fillContent('projects/micro.html', this)">Micro Farms</a>
-                        <a href="#" id="twelve" class="notCurrent" onclick="fillContent('projects/uftp.html', this)">Urban Farmers Training Program</a>
-                        <a href="#" id="thirteen" class="notCurrent" onclick="fillContent('projects/bees.html', this)">Albany Apiaries</a>
-                    </div>
+    <div id="topnav" class="topnav">
+        <div class="left">
+            <a href="#" id="one" class="current" onclick="fillContent('home.html', this)">Home</a>
+            <a href="#" id="two" class="notCurrent" onclick="fillContent('aboutUs.html', this)">About Us</a>
+            <a href="#" id="three" class="notCurrent" onclick="fillContent('events.html', this)">Upcoming Events</a>
+            <div class="dropdown">
+                <button class="dropbtn">Micro Projects
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" id="four" class="notCurrent" onclick="fillContent('projects/AVG.html', this)">Albany
+                        Victory Garden</a>
+                    <a href="#" id="five" class="notCurrent"
+                        onclick="fillContent('projects/lamaChopda.html', this)">Lama Chopda</a>
+                    <a href="#" id="six" class="notCurrent" onclick="fillContent('projects/seva.html', this)">SEVA
+                        Chocolate</a>
+                    <a href="#" id="seven" class="notCurrent"
+                        onclick="fillContent('projects/wheelsUP.html', this)">WheelsUp</a>
+                    <a href="#" id="eight" class="notCurrent" onclick="fillContent('projects/ppp.html', this)">Produce
+                        Pickup Project</a>
+                    <a href="#" id="nine" class="notCurrent" onclick="fillContent('projects/blueb.html', this)">Youth
+                        Blueberry Orchard</a>
+                    <a href="#" id="ten" class="notCurrent"
+                        onclick="fillContent('projects/frontlines.html', this)">Frontlines</a>
+                    <a href="#" id="eleven" class="notCurrent" onclick="fillContent('projects/micro.html', this)">Micro
+                        Farms</a>
+                    <a href="#" id="twelve" class="notCurrent" onclick="fillContent('projects/uftp.html', this)">Urban
+                        Farmers Training Program</a>
+                    <a href="#" id="thirteen" class="notCurrent"
+                        onclick="fillContent('projects/bees.html', this)">Albany Apiaries</a>
                 </div>
             </div>
-            <div class="right">
-                <a href="#" id="fourteen" class="notCurrent" onclick="fillContent('contact.html', this)">Contact us</a>
-            </div>
         </div>
-        
+        <div class="right">
+            <a href="#" id="fourteen" class="notCurrent" onclick="fillContent('contact.html', this)">Contact us</a>
+        </div>
+    </div>
+
     </div>
 
     <div class="container">
@@ -386,16 +413,10 @@ Get involved buttons
                             <img src="images/wide_shot_blueberries.jpeg">
                         </div>
                     </div>
-                    <div style="height:500px;">
-                        <div class="three-column">
-                            <div id="leftcolumn"></div>
-                            <div id="middlecolumn">
-                                <h2>Our Mission:</h2>
-                                <p>We want to stop all crime</p>
-                            </div>
-                            <div id="rightcolumn"></div>
-                        </div>
-                    </div>
+
+                    <h2>Our Mission:</h2>
+                    <p>We want to stop all crime</p>
+
                 </div>
 
                 <!--
@@ -454,34 +475,10 @@ Get involved buttons
                     26-3807697
                 </p>
                 <p>We appreciate all your support</p>
-            </div> 
+            </div>
         </div>
     </footer>
     </div>
-    <script>
-        function fillContent(url, elem) {
-            // Remove 'current' class from all links
-            document.querySelectorAll('#topnav a').forEach(link => {
-                link.classList.remove('current');
-                link.classList.add('notCurrent');
-            });
-        
-            // Add 'current' class to the clicked link
-            elem.classList.remove('notCurrent');
-            elem.classList.add('current');
-        
-            // Fetch and display content
-            fetch(url)
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector('#content').innerHTML = data;
-                });
-        }
-        
-    </script>
-
-
-
 
 </body>
 
