@@ -1,0 +1,418 @@
+/*--------------------------------------------------------------------------------------------------
+Basic
+--------------------------------------------------------------------------------------------------*/
+body,
+html {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    /* padding-bottom: 100px; */
+    font-family: optima, sans-serif;
+}
+
+/*--------------------------------------------------------------------------------------------------
+Top Navigation
+--------------------------------------------------------------------------------------------------*/
+
+.topnav {
+    display: flex;
+    background-color: rgb(0, 75, 19);
+    width: 100%;
+    position: 80px;
+}
+
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.topnav li {
+    float: left;
+}
+
+.topnav a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: rgb(199, 236, 199);
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #88b279;
+    color: rgb(0, 0, 0);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+/*--------------------------------------------------------------------------------------------------
+Eden's Rose Banner at top
+--------------------------------------------------------------------------------------------------*/.parallax {
+    background-image: url("images/edensRoseLogo.jpg");
+    height: 180px;
+    /* Adjusted to 60px as per your description */
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-color: #ffa3b0;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/*--------------------------------------------------------------------------------------------------
+Dropdown for menu
+--------------------------------------------------------------------------------------------------*/
+.dropbtn {
+    background-color: rgb(0, 75, 19);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    font-family: optima, sans-serif;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/*--------------------------------------------------------------------------------------------------
+Micro Projects Pages
+--------------------------------------------------------------------------------------------------*/
+.content-section {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.content-title {
+    margin-bottom: 20px;
+}
+
+.content-title h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.content-body {
+    display: flex;
+    flex-direction: row;
+}
+
+.content-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.content-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content-text {
+    flex: 2;
+}
+
+.content-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.containerImgs {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagez {
+    flex-basis: 40%;
+    margin: 10px;
+
+}
+
+.imagez img {
+    max-width: 500px;
+    height: auto;
+}
+
+/*--------------------------------------------------------------------------------------------------
+ERF title on home page
+--------------------------------------------------------------------------------------------------*/
+#edensRoseBanner {
+    font-size: 40px;
+    text-align: center;
+
+}
+
+/*--------------------------------------------------------------------------------------------------
+Slide show
+--------------------------------------------------------------------------------------------------*/
+.slideshow {
+    position: relative;
+    margin-top: 0px;
+    height: 100%;
+}
+
+.slideshow img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 750px;
+    max-height: 500px;
+}
+
+.slideshow img:first-child {
+    opacity: 1;
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+
+/*------------------------------------------------------------------------------------------------------ */
+/* Div layouting for nav bar
+/*------------------------------------------------------------------------------------------------------ */
+.right {
+    display: flex;
+    align-items: right;
+    margin-left: auto;
+}
+
+.left {
+    display: flex;
+    align-items: left;
+}
+
+.top-bottom-split {
+    display: flex;
+    flex-direction: column;
+}
+
+/*--------------------------------------------------------------------------------------------------
+Footer 
+--------------------------------------------------------------------------------------------------*/footer {
+    bottom: 0;
+    text-align: center;
+    padding: 2px;
+    background-color: #ffa3b0;
+    color: white;
+    display: block;
+    margin-top: 10px;
+    /* position: fixed; */
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-bottom {
+    background-color: #ffa3b0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-bottom #main-footer {
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------------------------------------------
+About Us page
+--------------------------------------------------------------------------------------------------*/
+.project {
+    border: 1px solid rgb(0, 57, 6);
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #ffddbc;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+.project p {
+    margin-bottom: 0;
+}
+
+
+/* --------------------------------------------------------------------------------------------------
+Get Involved Button/Form
+-------------------------------------------------------------------------------------------------- */
+.button-56 {
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    margin:20px;
+    margin-left: 530px;
+}
+
+.button-56:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.button-56:hover:after {
+    transform: translate(0, 0);
+}
+
+.button-56:active {
+    background-color: #ffdeda;
+    outline: 0;
+}
+
+.button-56:hover {
+    outline: 0;
+}
+
+@media (min-width: 768px) {
+    .button-56 {
+        padding: 0 40px;
+    }
+}
+
+#getInvolvedForm {
+    display: grid;
+    gap: 10px;
+}
+
+#getInvolvedForm label,
+#getInvolvedForm input,
+#getInvolvedForm select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+#getInvolvedForm .name-fields {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+#getInvolvedForm .double-fields {
+    display: flex;
+    gap: 10px;
+}
+
+#getInvolvedForm button {
+    grid-column: span 2;
+    /* Span the button across both columns */
+}
+
+/* Adjustments for smaller input boxes */
+#getInvolvedForm input[type="text"],
+#getInvolvedForm input[type="email"],
+#getInvolvedForm input[type="tel"] {
+    width: calc(50% - 5px);
+}
+
+/* Enable multiple selection for projects */
+#getInvolvedForm select[name="projects"] {
+    height: auto;
+}
+
+/* Arrange projects and age on the same row */
+#getInvolvedForm .projects-and-age {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#getInvolvedForm select[name="age"] {
+    width: calc(50% - 5px);
+}
