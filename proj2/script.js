@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var getInvolvedButton = document.getElementById('gib');
-    var submitButton = document.getElementById('submitButton');
-    var formContainer = document.getElementById('formContainer');
+    // Get DOM elements
+    var getInvolvedButton = document.getElementById('gib'); // Get "Get Involved" button
+    var submitButton = document.getElementById('submitButton'); // Get submit button
+    var formContainer = document.getElementById('formContainer'); // Get form container
 
+    // Display form container when "Get Involved" button is clicked
     getInvolvedButton.addEventListener('click', function () {
         formContainer.style.display = 'block';
     });
 
+    // Hide form container when submit button is clicked
     submitButton.addEventListener('click', function () {
         formContainer.style.display = 'none';
     });
